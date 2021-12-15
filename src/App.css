@@ -1,0 +1,90 @@
+body {
+  background-color: #282c34;
+  min-height: 100vh;
+}
+
+.App {
+  padding: 40px;
+}
+
+.btns-view {
+  display: flex;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.btn {
+  height: 41px;
+  border: 1px solid #fff;
+  border-radius: 4px;
+  box-shadow: none;
+  outline: none;
+  padding: 11px 20px 11px;
+  font-size: 15px;
+  background: #474c58;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.btn:not(:last-child) {
+  margin-right: 20px;
+}
+
+.btn:hover,
+.btn.active {
+  background-color: #2a2c2f;
+}
+.btn.active {
+  border-color: #666;
+  pointer-events: none;
+  user-select: none;
+  opacity: 0.8;
+}
+
+.input {
+  height: 41px;
+  border-radius: 4px;
+  padding: 10px;
+  border: 1px solid #333;
+  outline: none;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.exercise-container {
+}
+.exercise-container > .head {
+  color: #f2f2f2;
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+
+.inputs {
+  display: flex;
+  align-items: center;
+}
+
+.inputs > .item {
+}
+.inputs > .item:not(:last-child) {
+  margin-right: 20px;
+}
+
+.exercise-one-result {
+  margin-top: 20px;
+  background: #23262b;
+  color: #fff;
+  padding: 10px 20px;
+  border: 1px solid #fff;
+  border-radius: 4px;
+}
+.exercise-one-result p {
+  margin: 0;
+}
+
+
+.exercise-two-result p {
+  color: #fff;
+  margin: 0 0 10px;
+}

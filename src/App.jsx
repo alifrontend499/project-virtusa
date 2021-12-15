@@ -1,13 +1,55 @@
-import React from 'react'
+import { useState } from 'react'
 
-// global styles
-import 'assets/styles/global_styles.scss'
+// styleas
+import './App.css';
 
-// components  
-import StatefullComponent from 'components/StatefullComponent'
+// components
+import ExerciseOne from './Components/ExerciseOne'
+import ExerciseTwo from './Components/ExerciseTwo'
 
-export default function App() {
-    return (
-        <StatefullComponent />
-    )
+function App() {
+	// states
+	const [exerciseView, setExerciseView] = useState("exercise1")
+
+	return (
+		<div className="App">
+			{/* btns */}
+			<div className="btns-view">
+				<button
+					className={`btn ${exerciseView === "exercise1" ? "active" : ""}`}
+					onClick={ev => {
+						ev.preventDefault()
+
+						// setting excercise view
+						setExerciseView("exercise1")
+					}}>
+					Excersice One
+				</button>
+
+				<button
+					className={`btn ${exerciseView === "exercise2" ? "active" : ""}`}
+					onClick={ev => {
+						ev.preventDefault()
+
+						// setting excercise view
+						setExerciseView("exercise2")
+					}}>
+					Excersice Two
+				</button>
+			</div>
+
+			{/* content view */}
+			<div className="content-view">
+				{
+					exerciseView === "exercise1" ? (
+						<ExerciseOne />
+					) : (
+						<ExerciseTwo />
+					)
+				}
+			</div>
+		</div>
+	);
 }
+
+export default App;

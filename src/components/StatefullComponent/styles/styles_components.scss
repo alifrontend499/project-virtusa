@@ -1,0 +1,24 @@
+// IMPORTANT SCSS FILES
+@import "/src/assets/styles/components/mixins";
+
+// styles
+.page-component {
+    padding: 20px;
+
+    .heading-container {
+        .heading {
+            margin: 0 0 30px;
+            color: #333;
+        }
+    }
+
+    .card-container {
+        margin: 0 auto;
+        @include min_width(992px) {
+            max-width: 800px;
+        }
+        .loading {
+            width: 100%;
+        }
+    }
+}
